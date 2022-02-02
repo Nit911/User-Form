@@ -20,12 +20,12 @@ export class LoginComponent implements OnInit {
   userData : any
 
   ngOnInit(): void {
-    //this.userData = this.dataService.getData()
+    this.userData = this.dataService.getData()
     this.dataService.getUserData().subscribe(( data : any ) => this.userData = data)
   }
 
 Login():any{
-  // console.log()
+  console.log(this.userData)
   this.userData.forEach((element:any) => {
     if(element.email === this.stdForm.value.email){
       console.log(element.email)

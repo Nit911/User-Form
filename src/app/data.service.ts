@@ -17,7 +17,7 @@ export class DataService {
   constructor( private http : HttpClient ) { }
 
   getData(){
-    return this.userData
+    return this.http.get(this.userData)
   }
 
   getUserData(){
